@@ -33,13 +33,8 @@
                         <label>Students<span class="text-danger">*</span></label>
                         <input class="form-control mt-1" name="students" type="file" accept=".xlsx, .xls, .csv" />
                     </div>
-                    @if ($errors->any())
-                        <div class="alert alert-danger" role="alert">
-                            @foreach ($errors->all() as $error)
-                                {{ $error }}
-                            @endforeach
-                        </div>
-                    @endif
+
+                    <x-error_message />
 
                     <div class="row">
                         <div class="col-md-6 my-2">
@@ -55,11 +50,7 @@
 
         <div class="card mt-3">
             <div class="card-body">
-                @if (session('success'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('success') }}
-                    </div>
-                @endif
+                <x-success_message />
 
                 <table class="table-striped table-responsive table">
                     <thead>
