@@ -16,14 +16,14 @@
 
 </head>
 
-<body class="h-100 mt-3">
+<body class="h-100 my-3">
     <div class="container">
         <div class="card mt-10">
             <div class="card-body">
                 <h5 class="fw-bold">
                     Upload from file
                 </h5>
-                <a class="link-secondary" href="{{ route('download_template', ['file' => 'template.xlsx']) }}">
+                <a class="link-secondary" href="{{ asset('files/template.xlsx') }}" download>
                     <u>Download Excel Template</u>
                 </a>
 
@@ -52,7 +52,7 @@
             <div class="card-body">
                 <x-success_message />
 
-                <table class="table-striped table-responsive table">
+                <table class="table-striped table-sm table-responsive table">
                     <thead>
                         <tr>
                             <th>Name</th>

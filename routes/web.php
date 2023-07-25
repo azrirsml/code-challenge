@@ -15,13 +15,13 @@ use Illuminate\Support\Facades\Storage;
 |
 */
 
-Route::get('download-template/{file}', function ($file) {
-    $path = storage_path("app/templates/{$file}");
+// Route::get('download-template/{file}', function ($file) {
+//     $path = public_path("files/{$file}.xlsx");
 
-    if (file_exists($path)) {
-        return Storage::download("templates/{$file}");
-    }
-})->name('download_template');
+//     if (file_exists($path)) {
+//         return response()->download("files/{$file}.xlsx");
+//     }
+// })->name('download_template');
 
 Route::get('/', [StudentController::class, 'index'])->name('students.index');
 Route::post('students', [StudentController::class, 'store'])->name('students.store');
